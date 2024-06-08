@@ -1,0 +1,25 @@
+$height-100: 100vh;
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: $height-100;
+
+  h2 {
+    font-size: var(--font-size-36);
+    font-weight: var(--font-weight-700);
+  }
+
+  p {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-600);
+    margin: var(--spacing-20);
+  }
+
+  a{
+    color: var(--color-purple);
+  }
+}

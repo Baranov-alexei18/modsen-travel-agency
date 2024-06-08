@@ -1,0 +1,11 @@
+$width-100: 100%;
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: $width-100;
+  padding-top: var(--spacing-48);
+}
