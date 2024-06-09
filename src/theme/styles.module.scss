@@ -8,3 +8,29 @@
 .visible {
     opacity: 1;
 }
+
+.container {
+    margin: auto;
+    padding: 0 var(--spacing-20);
+    width: 100%;
+
+    @media (min-width: 576px) {
+        max-width: calc(var(--breakpoint-sm) - var(--spacing-32));
+    }
+
+    @media (min-width: 768px) {
+        max-width: calc(var(--breakpoint-md) - var(--spacing-32));
+    }
+
+    @media (min-width: 992px) {
+        max-width: calc(var(--breakpoint-lg) - var(--spacing-32));
+    }
+
+    @media (min-width: 1200px) {
+        max-width: calc(var(--breakpoint-xl) - var(--spacing-32));
+    }
+
+    @media (min-width: 1500px) {
+        max-width: calc(var(--breakpoint-xxl) - var(--spacing-32));
+    }
+}
