@@ -14,19 +14,9 @@ export const SectionTestimonial = () => {
 
   return (
     <section className={styles.SectionTestimonial}>
-      <div className={styles.TestimonialWrapper}>
-        <div className={styles.InfoWrapper}>
-          <h2>{t('sectionTitle')}</h2>
-          <p className={styles.title}>
-            {t('title')}
-          </p>
-          <p className={styles.subtitle}>
-            {t('subtitle')}
-          </p>
-        </div>
-        <div className={styles.InfoWrapper}>
-          {reviews.length && <Slider data={reviews} />}
-        </div>
+      <h2>{t('sectionTitle')}</h2>
+      <div className={styles.InfoWrapper}>
+        <Slider data={reviews} />
       </div>
     </section>
   );

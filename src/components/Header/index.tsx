@@ -60,8 +60,8 @@ export const Header = () => {
               {t(`${path}`)}
             </Link>
           ))}
-          <LangSwitcher locale={locale} />
         </div>
+        <LangSwitcher locale={locale} />
         <button className={styles.menuButton} onClick={toggleSidebar}>
           ☰
         </button>

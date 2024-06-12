@@ -1,14 +1,16 @@
 .button {
     cursor: pointer;
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-700);
+    height: auto;
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-500);
     border: none;
+    border-radius: var(--border-radius-4);
     background-color: var(--color-white);
-    padding: var(--spacing-16) var(--spacing-40);
+    padding: var(--spacing-0) auto;
     transition: box-shadow 1s;
     box-shadow: none;
 
     &:hover {
-        box-shadow: var(--spacing-4) var(--spacing-4) var(--spacing-4) var(--color-dark);
+        box-shadow: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--color-dark);
     }
   }

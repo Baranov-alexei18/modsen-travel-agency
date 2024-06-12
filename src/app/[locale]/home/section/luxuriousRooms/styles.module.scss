@@ -1,0 +1,70 @@
+@import '@/theme/styles.module.scss';
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: var(--color-main-white);
+  text-align: center;
+  padding: var(--spacing-32) var(--spacing-0);
+  margin-top: var(--spacing-40);
+
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+
+    .overlay {
+      position: absolute;
+      top: var(--spacing-0);
+      left: var(--spacing-0);
+      width: 100%;
+      height: 100%;
+      background: var(--color-brown);
+      opacity: 0.7;
+    }
+  }
+
+  .content {
+    @extend .container;
+    position: relative;
+    z-index: var(--z-index-1);
+
+    .title {
+      font-size: var(--font-size-56);
+      font-weight: var(--font-weight-600);
+      margin-bottom: var(--spacing-20);
+
+      &::after {
+        content: '';
+        margin: auto;
+        margin-top: var(--spacing-20);
+        display: block;
+        width: 130px;
+        height: 6px;
+        background-color: var(--color-main-white);
+      }
+    }
+
+    .subtitle {
+      margin-bottom: var(--spacing-52);
+    }
+
+    .rooms {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--spacing-20);
+    }
+  }
+}

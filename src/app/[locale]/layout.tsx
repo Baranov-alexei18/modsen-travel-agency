@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import { NextIntlClientProvider } from 'next-intl';
 import {
   getMessages,
@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { locales } from '@/config';
 
-const inter = Inter({ subsets: ['latin'] });
+const Raleway_font = localFont({ src: '../../../public/fonts/Raleway.ttf' });
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -37,7 +37,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
+      <body className={Raleway_font.className}>
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

@@ -1,30 +1,31 @@
-.sectionAuthor {
+@import '@/theme/styles.module.scss';
+
+.wrapper {
   position: relative;
   text-align: center;
-  gap: var(--spacing-40);
-  padding: var(--spacing-80);
+  margin-top: var(--spacing-40);
+  @extend .container;
 
   .sectionTitle {
     font-size: var(--font-size-36);
     font-weight: var(--font-weight-700);
     line-height: var(--spacing-48);
-    margin-bottom: var(--spacing-40);
+    margin-bottom: var(--spacing-12);
   }
 
-  .cardsAuthors {
+  .allFacilities {
     display: flex;
-    gap: var(--spacing-52);
-    justify-content: end;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-
+    gap: var(--spacing-20);
+    margin-top: var(--spacing-40);
   }
 
   @media (max-width: 992px) {
     padding: var(--spacing-20);
 
-    .cardsAuthors {
-      flex-wrap: wrap;
-      justify-content: center;
+    .categoryContainer {
       gap: var(--spacing-20);
     }
   }

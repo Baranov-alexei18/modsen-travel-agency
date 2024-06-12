@@ -1,9 +1,11 @@
+@import url('/fonts/DancingScript-Regular.ttf');
+
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --font-family-dancing: "Dancing Script", cursive;
+
 
   --color-dark: #232536;
   --color-dark-grey: #4C4C4C;
@@ -18,7 +20,10 @@
   --color-light-purple: #F4F0F8;
   --color-red: #E3504F;
   --color-green: #4CAF50;
+  --color-turquoise: #00A699;
+  --color-brown: #7C6A46;
 
+  --font-size-11: 11px;
   --font-size-12: 12px;
   --font-size-14: 14px;
   --font-size-16: 16px;
@@ -35,6 +40,7 @@
   --font-weight-500: 500;
   --font-weight-600: 600;
   --font-weight-700: 700;
+  --font-weight-800: 800;
 
   --spacing-0: 0px;
   --spacing-4: 4px;
@@ -104,4 +110,11 @@ a {
   &:hover::after {
     width: 100%;
   }
+}
+
+@font-face {
+  font-family: 'DancingScript';
+  src: url('/fonts/DancingScript-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }

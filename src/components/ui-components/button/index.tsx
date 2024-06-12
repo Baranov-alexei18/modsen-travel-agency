@@ -6,14 +6,14 @@ import styles from './style.module.scss';
 
 export const ButtonApp = (
   {
-    children, backgroundColor, onClick, disabled, type, cyId,
+    children, style, onClick, disabled, type, cyId,
   }: Partial<ButtonType>,
 ) => (
   <button
     data-testid={cyId}
     type={type || 'button'}
     className={styles.button}
-    style={{ backgroundColor }}
+    style={{ ...style }}
     onClick={onClick}
     disabled={disabled}
   >

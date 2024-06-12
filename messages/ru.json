@@ -41,11 +41,17 @@
     },
     "pages":{
       "home": {
-        "banner":{
-          "startInfo": "Размещено в STARTUP",
-          "title": "Пошаговое руководство по выбору отличных пар шрифтов",
-          "subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-          "btnTitle": "Читать далее"
+        "facilities":{
+          "sectionTitle": "Наши возможности",
+          "sectionSubtitle": "Мы предлагаем современные (5-звездочные) гостиничные услуги для вашего комфорта.",
+          "Swimming Pool": "Бассейн",
+          "Wifi": "Wifi",
+          "Breakfast": "Завтрак",
+          "Gym": "Зал",
+          "Game center": "Центр игр",
+          "24/7 Light": "24/7 свет",
+          "Laundry": "Прачечная",
+          "Parking space": "Парковка"
         },
         "posts":{
           "featuredPost": "Лучший пост",
@@ -77,7 +83,7 @@
           "title": "Привет, Меня зовут {name} и добро пожаловать в Мой Блог"
         },
         "testimonials":{
-          "sectionTitle": "ОТЗЫВЫ",
+          "sectionTitle": "Отзывы",
           "title": "Что люди говорят о нашем блоге",
           "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
         }

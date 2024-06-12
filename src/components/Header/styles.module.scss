@@ -11,34 +11,27 @@
   list-style: none;
   z-index: var(--z-index-100);
   @extend .container;
-  
+
   .logo {
+    flex: 2;
     font-size: var(--font-size-24);
     font-weight: var(--font-weight-700);
   }
 
   .actions {
+    flex: 1.6;
     display: flex;
     align-items: center;
     font-size: var(--font-size-16);
 
     a {
-      margin-right: var(--spacing-28);
-
-      &:active{
-        color: red;
-        background-color: red;
-      }
+      font-weight: var(--font-weight-700);
+      margin-right: var(--spacing-64);
     }
 
     button {
       margin-right: var(--spacing-20);
     }
-  }
-
-  .activeLink {
-    color: red;
-    background-color: red;
   }
 
   .menuButton {
