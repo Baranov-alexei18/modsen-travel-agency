@@ -1,7 +1,10 @@
 'use client';
 
+import emailjs from '@emailjs/browser';
+import { useFormik } from 'formik';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
+import * as Yup from 'yup';
 
 import { LINKS_FOOTER, SOCIAL_NETWORK_LINKS } from '@/constants/links';
 
@@ -15,6 +18,40 @@ const Footer = () => {
   const locale = useLocale();
   const t = useTranslations('header');
 
+  const {
+    handleSubmit, handleChange, handleBlur, values,
+  } = useFormik({
+    initialValues: { email: '' },
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email('Invalid email address')
+        .required('Required'),
+    }),
+    onSubmit: async (values: {
+      email: string,
+    }, { resetForm }: { resetForm: () => void }) => {
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_SUBSCRIBE!,
+          { to_email: values.email },
+          {
+            publicKey: process.env.NEXT_PUBLIC_EMAILJS_KEY!,
+          },
+        )
+        .then(
+          () => {
+            resetForm();
+          },
+          (error) => {
+            console.error(error);
+          },
+        )
+        .finally(() => {
+          console.error('Good');
+        });
+    },
+  });
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
@@ -69,8 +106,15 @@ const Footer = () => {
             to get latest deals on our rooms and vacation discount.
           </p>
           <form className={styles.newsletterForm}>
-            <input type="email" placeholder="Enter your email" />
-            <ButtonApp type="submit" style={buttonStyled1}>Subscribe </ButtonApp>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.email}
+            />
+            <ButtonApp type="submit" style={buttonStyled1} onClick={handleSubmit}>Subscribe </ButtonApp>
           </form>
         </div>
       </div>
