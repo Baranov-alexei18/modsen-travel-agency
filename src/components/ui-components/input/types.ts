@@ -3,6 +3,7 @@ export type InputType = {
     type: string,
     name: string
     value: string,
+    defaultValue?: string,
     placeholder: string,
     isTouch: boolean,
     error: string,

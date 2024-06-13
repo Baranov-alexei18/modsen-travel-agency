@@ -13,7 +13,7 @@ export const TestimonialCard = ({
       <span className={styles.date}>{date}</span>
       <div className={styles.rating}>
         {Array.from({ length: rating }).map((_, index) => (
-          <span key={rating}>&#9733;</span>
+          <span key={index}>&#9733;</span>
         ))}
       </div>
     </div>

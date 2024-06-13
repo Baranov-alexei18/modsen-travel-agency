@@ -32,7 +32,7 @@ export const BaseModal = ({ isOpen, onClose, children }: ModalProps) => {
     >
       <div className={styles.modalContent}>
         <div className={styles.header}>
-          <ButtonApp onClick={onClose}>Close</ButtonApp>
+          <ButtonApp onClick={onClose}>X</ButtonApp>
         </div>
         {children}
       </div>

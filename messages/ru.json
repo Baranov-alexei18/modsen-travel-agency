@@ -13,13 +13,15 @@
       "/privacy-police": "Конфиденциальность"
     },
     "forms": {
-      "subscribe":{
-        "placeholder": "Введите ваш емайл",
-        "title": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
-        "subscribe": "Подписаться",
-        "invalidData": "Неверный email",
-        "successMessage": "Вы подписаны",
-        "errorMessage": "Что-то пошло не так. Попробуйте еще раз",
+      "booking":{
+        "location": "Страна",
+        "roomType": "Тип номера",
+        "person": "Человек",
+        "checkIn": "Начало",
+        "checkOut": "Конец",
+        "bookNow": "Забронировать",
+        "name":"ФИО",
+        "phone": "Номер +375 ...",
         "loading": "Загрузка..."
       },
       "contact":{

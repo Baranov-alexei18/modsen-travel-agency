@@ -5,13 +5,14 @@ import { InputType } from './types';
 import styles from './styles.module.scss';
 
 export const InputApp = ({
-  value, placeholder, onChange, error, type, name, onBlur, isTouch, cyId,
+  value, placeholder, onChange, error, type, name, onBlur, isTouch, cyId, defaultValue,
 }: Partial<InputType>) => (
   <div className={styles.wrapper}>
     <input
       data-testid={cyId}
       type={type}
       name={name}
+      defaultValue={defaultValue}
       value={value}
       data-touch={isTouch}
       className={`${styles.input} ${error && styles.invalid}`}

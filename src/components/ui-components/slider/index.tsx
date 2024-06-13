@@ -72,7 +72,7 @@ const testimonials = [
   },
 ];
 
-const ANIMATION_DURING = 300;
+const ANIMATION_DURING = 100;
 
 export const Slider = ({ data }: { data: SliderDataType[] }) => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
@@ -104,10 +104,10 @@ export const Slider = ({ data }: { data: SliderDataType[] }) => {
       </div>
       <div
         className={styles.slides}
-        style={{ transform: `translateX(-${currentReviewIndex * 35}%)` }}
+        style={{ transform: `translateX(-${currentReviewIndex * 510}px)` }}
       >
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard key={testimonial.author} {...testimonial} />
+        {testimonials.map((testimonial) => (
+          <TestimonialCard key={`${testimonial.author}${testimonial.text}`} {...testimonial} />
         ))}
       </div>
     </div>

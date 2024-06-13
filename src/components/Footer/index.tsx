@@ -46,10 +46,7 @@ const Footer = () => {
           (error) => {
             console.error(error);
           },
-        )
-        .finally(() => {
-          console.error('Good');
-        });
+        );
     },
   });
   return (

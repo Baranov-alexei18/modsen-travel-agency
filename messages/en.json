@@ -13,13 +13,15 @@
       "/privacy-police": "Privacy police"
     },
     "forms": {
-      "subscribe":{
-        "placeholder": "Enter your email",
-        "title": "Subscribe to our news letter to get latest updates and news",
-        "subscribe": "Subscribe",
-        "invalidData": "Invalid email",
-        "successMessage": "Subscription successful",
-        "errorMessage": "Subscription failed. Please try again",
+      "booking":{
+        "location": "Location",
+        "roomType": "Room type",
+        "person": "Person",
+        "checkIn": "Check in",
+        "checkOut": "Check out",
+        "bookNow": "Book Now",
+        "name":"Full Name",
+        "phone": "Phone +375 ...",
         "loading": "Loading..."
       },
       "contact":{
