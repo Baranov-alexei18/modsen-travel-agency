@@ -5,8 +5,6 @@ import { useEffect, useState } from 'react';
 import { JoinForm } from '@/components/Forms/JoinForm';
 import { PostDataType } from '@/types/post';
 
-import { SectionCategory } from '../home/section/facilities';
-
 import { SectionPosts } from './section/all-posts';
 import { SectionFeaturedPost } from './section/features-post';
 
@@ -39,7 +37,6 @@ export default function Blog() {
         disablePrev={page === MIN_PAGE}
         disableNext={page === totalPages}
       />
-      <SectionCategory />
       <JoinForm />
     </main>
   );
