@@ -78,7 +78,6 @@ export const SubscribeForm = () => {
             isTouch={Boolean(touched.email)}
           />
           <ButtonApp
-            backgroundColor="var(--color-yellow)"
             disabled={Boolean(errors.email)}
             type="submit"
           >

@@ -121,7 +121,6 @@ export const ContactForm = () => {
         ) : null}
 
         <ButtonApp
-          backgroundColor="var(--color-yellow)"
           cyId="contact-form-submit"
           type="submit"
         >

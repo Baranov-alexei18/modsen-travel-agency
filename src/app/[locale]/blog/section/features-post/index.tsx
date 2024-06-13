@@ -41,7 +41,6 @@ export const SectionFeaturedPost = ({ data }: PostDataProps) => {
           {subtitle}
         </p>
         <ButtonApp
-          backgroundColor="var(--color-yellow)"
           onClick={handleClickToBlogPostPage}
         >
           {t('btnTitle')}
