@@ -28,7 +28,7 @@ export const SectionLuxuriousRooms = () => {
         <p className={styles.subtitle}>All rooms are designed for your comfort</p>
         <div className={styles.rooms}>
           {LUX_ROOMS.map((
-            { src, desc, count }
+            { src, desc, count },
           ) => <LuxRoomCard key={src} src={src} count={count} description={desc} />)}
         </div>
       </div>
