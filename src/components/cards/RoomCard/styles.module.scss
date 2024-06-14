@@ -7,6 +7,11 @@
   background-color: var(--color-light-grey-second);
   border-radius: var(--border-radius-4);
   text-align: center;
+  transition: box-shadow 1s;
+
+  &:hover {
+    box-shadow: var(--spacing-0) var(--spacing-8) var(--spacing-8) rgba(0, 0, 0, 0.5);
+  }
 
   .imageContainer {
     width: 100%;
@@ -47,10 +52,30 @@
   }
 
   .footer {
+    width: 100%;
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
     padding: var(--spacing-12);
+
+    .advantages {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-12);
+
+      img {
+        padding: var(--spacing-8);
+        height: 32px;
+        width: 32px;
+        object-fit: contain;
+        border-radius: var(--border-radius-circle);
+        background-color: var(--color-light-grey);
+      }
+    }
 
     button {
       height: 47px;
-    } 
+      margin-left: auto;
+    }
   }
 }

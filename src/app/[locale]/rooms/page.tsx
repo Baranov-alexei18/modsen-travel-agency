@@ -1,22 +1,26 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { lazy, useRef } from 'react';
 
-import { RoomCard } from '@/components/cards/RoomCard';
-import { JoinForm } from '@/components/Forms/JoinForm';
-import { PostDataType } from '@/types/post';
+import { VideoSection } from './sections/VideoSection';
+import { ViewRoom } from './sections/viewRoom';
 
-import styles from '../styles.module.scss';
+const BannerRoom = lazy(() => import('./sections/banner'));
 
 export default function Rooms() {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <main className={styles.main}>
-      <RoomCard
-        src="/png/hotelRoomsBg.png"
-        price="₦190,000"
-        title="The Royal Room"
-        subtitle="Available: Yes"
-      />
+    <main>
+      <BannerRoom handleScroll={handleScroll} />
+      <VideoSection />
+      <ViewRoom ref={contentRef} />
     </main>
   );
 }

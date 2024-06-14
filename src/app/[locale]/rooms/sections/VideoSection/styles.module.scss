@@ -1,0 +1,32 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  margin: auto;
+
+  .video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-light-grey-second);
+    border: none;
+    border-radius: var(--border-radius-circle);
+    width: var(--spacing-64);
+    height: var(--spacing-64);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background: var(--color-light-grey);
+    }
+  }
+}

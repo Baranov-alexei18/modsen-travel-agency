@@ -1,0 +1,14 @@
+@import '@/theme/styles.module.scss';
+
+.wrapper {
+  @extend .container;
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  display: flex;
+  gap: var(--spacing-20);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: var(--color-main-white);
+  padding: var(--spacing-32) var(--spacing-0);
+}
