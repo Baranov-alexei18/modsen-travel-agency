@@ -1,0 +1,27 @@
+@import '@/theme/styles.module.scss';
+
+.wrapper {
+  @extend .container;
+  position: relative;
+  margin-bottom: var(--spacing-80);
+
+  .galleryContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-20);
+  }
+
+  .imageWrapper {
+    flex: 1;
+    border-radius: var(--border-radius-8);
+    max-height: 480px;
+    max-width: 380px;
+    overflow: hidden;
+    object-fit: contain;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

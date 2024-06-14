@@ -1,0 +1,42 @@
+.galleryContainer {
+    display: flex;
+    flex: 1;
+
+    .thumbnails {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-12);
+        margin-right: var(--spacing-20);
+    }
+
+    .thumbnail {
+        overflow: hidden;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        border: 1px solid var(--color-main-white);
+        transition: border-color 0.3s;
+        background-color: var(--color-light-yellow);
+        border-radius: var(--border-radius-12);
+
+        &.selected {
+            border-color: var(--color-yellow);
+        }
+    }
+
+    .mainImage {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        max-height: 100%;
+        background-color: var(--color-light-yellow);
+        border-radius: var(--border-radius-12);
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+        }
+    }
+}

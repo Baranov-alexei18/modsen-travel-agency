@@ -1,8 +1,13 @@
+import { BannerRoom } from './banner';
+import { MainSection } from './main';
+import { PhotoZoneSection } from './photoZone';
+
 export default function Page({ params }: { params: { id: number } }) {
   return (
     <div>
-      My Post:
-      {params.id}
+      <BannerRoom />
+      <MainSection />
+      <PhotoZoneSection />
     </div>
   );
 }
