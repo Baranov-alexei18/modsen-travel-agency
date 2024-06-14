@@ -4,7 +4,6 @@ import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 
 import { ButtonApp } from '@/components/ui-components/button';
-import { buttonStyled2 } from '@/components/ui-components/button/options';
 
 import styles from './styles.module.scss';
 
