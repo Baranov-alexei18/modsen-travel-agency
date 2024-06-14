@@ -7,7 +7,7 @@ import { ButtonApp } from '@/components/ui-components/button';
 
 import styles from './styles.module.scss';
 
-export const VideoSection: React.FC = () => {
+export const PreviewSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 

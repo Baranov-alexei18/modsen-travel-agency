@@ -2,7 +2,7 @@
 
 import { lazy, useRef } from 'react';
 
-import { VideoSection } from './sections/videoSection';
+import { PreviewSection } from './sections/previewSection';
 import { ViewRoom } from './sections/viewRoom';
 
 const BannerRoom = lazy(() => import('./sections/banner'));
@@ -19,7 +19,7 @@ export default function Rooms() {
   return (
     <main>
       <BannerRoom handleScroll={handleScroll} />
-      <VideoSection />
+      <PreviewSection />
       <ViewRoom ref={contentRef} />
     </main>
   );
