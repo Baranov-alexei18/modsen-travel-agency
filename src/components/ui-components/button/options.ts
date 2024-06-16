@@ -23,3 +23,13 @@ export const buttonStyled3 = {
   width: '100%',
   borderRadius: 'var(--border-radius-8)',
 };
+
+export const buttonStyled4 = {
+  background: 'var(--color-yellow)',
+  fontSize: 'var(--font-size-18)',
+  fontWeight: 'var(--font-weight-700)',
+  color: 'var(--color-dark)',
+  width: '350px',
+  height: '60px',
+  borderRadius: 'var(--spacing-0)',
+};

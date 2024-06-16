@@ -10,13 +10,11 @@ const languages = [
 ];
 
 export const LangSwitcher = ({ locale }: { locale: string }) => {
-//   const [language, setLanguage] = useState(locale);
   const router = useRouter();
 
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleLanguageChange = (code: string) => {
-    // setLanguage(code);
     const currentPath = window.location.href;
 
     const newUrl = currentPath.replace(`/${locale}`, `/${code}/`);

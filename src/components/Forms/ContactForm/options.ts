@@ -3,7 +3,6 @@ import * as Yup from 'yup';
 export const initialValues = {
   fullName: '',
   email: '',
-  queryRelated: '',
   message: '',
 };
 
@@ -14,8 +13,6 @@ export const validationSchema = Yup.object({
     .required('Required'),
   email: Yup.string()
     .email('Invalid email address')
-    .required('Required'),
-  queryRelated: Yup.string()
     .required('Required'),
   message: Yup.string()
     .required('Required'),

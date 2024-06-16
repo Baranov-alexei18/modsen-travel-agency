@@ -110,23 +110,8 @@
         "whyStarted": "Почему мы запустили этот блог"
       },
       "contact":{
-        "contactUs": "СВЯЗАТЬСЯ С НАМИ",
-        "title": "Давайте начнем беседу",
-        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
-        "worksHoursTitle": "Рабочее время",
-        "worksHours": "9:00 до 20:00",
-        "worksDays": "С понедельника по пятницу",
-        "support": "Служба поддержки доступна 24/7"
-      },
-      "category":{
-        "loading": "Загрузка...",
-        "nonPosts": "Постов по запросу нет",
-        "categories": "Категории",
-        "tags": "Тэги"
-      },
-      "privacyPolice":{
-        "title": "Политика конфиденциальности",
-        "lastUpdate": "Последнее обновление 23 мая 2024 г."
-      } 
+        "title": "Комнаты и люкс-номера",
+        "subtitle": "Элегантные роскошные спальни в этой галерее демонстрируют индивидуальный дизайн интерьера и идеи декора. Просмотрите фотографии и найдите свой идеальный дизайн роскошной спальни."
+      }
     }
 }

@@ -46,37 +46,16 @@
 
     .title {
       font-size: var(--font-size-56);
-      font-weight: var(--font-weight-700);
+      font-weight: var(--font-weight-800);
       margin-bottom: var(--spacing-40);
     }
 
     .subtitle {
       width: 600px;
       font-size: var(--font-size-20);
-      font-weight: var(--font-weight-600);
+      font-weight: var(--font-weight-500);
       margin: auto;
       margin-bottom: var(--spacing-40);
-    }
-
-    .btnDown {
-      cursor: pointer;
-      position: relative;
-      width: 50px;
-      height: 90px;
-      border-radius: var(--border-radius-oval);
-      background: none;
-      border: 1px solid var(--color-main-white);
-      transition: background-color 1s ease;
-
-      img {
-        margin: auto auto;
-        max-height: var(--spacing-16);
-        max-width: var(--spacing-16);
-      }
-
-      &:hover{
-        background-color: var(--color-brown);
-      }
     }
   }
 }
