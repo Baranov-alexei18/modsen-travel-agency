@@ -1,0 +1,68 @@
+@import '@/theme/styles.module.scss';
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @extend .container;
+
+  .description {
+    max-width: 400px;
+    padding-top: var(--spacing-28);
+
+    h1 {
+      font-size: var(--font-size-56);
+      font-weight: var(--font-weight-700);
+      line-height: var(--spacing-64);
+      padding: var(--spacing-28) var(--spacing-0);
+      margin-bottom: var(--spacing-48);
+    }
+
+    h3 {
+      font-family: var(--font-family-dancing);
+      font-size: var(--font-size-36);
+      color: var(--color-brown);
+      padding-top: var(--spacing-48);
+    }
+
+    p {
+      max-width: 250px;
+      font-size: var(--font-size-16);
+      padding-bottom: var(--spacing-20);
+      margin-bottom: var(--spacing-12);
+    }
+  }
+
+  .moveTour {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-12);
+
+    button {
+      font-size: var(--font-size-22) !important;
+      font-weight: var(--font-weight-600);
+      padding: var(--spacing-12) var(--spacing-28);
+    }
+  }
+
+  .image {
+    position: relative;
+    height: 620px;
+    width: 700px;
+
+    img {
+      position: relative;
+      height: inherit;
+      width: inherit;
+      object-fit: cover;
+    }
+  }
+
+  .formWrapper {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    bottom: var(--spacing-48);
+  }
+}

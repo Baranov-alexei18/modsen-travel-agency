@@ -1,0 +1,31 @@
+@import '@/theme/styles.module.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: var(--spacing-80);
+  text-align: center;
+
+  h2 {
+    font-size: var(--font-size-48);
+    font-weight: var(--font-weight-700);
+    line-height: var(--spacing-52);
+    margin-bottom: var(--spacing-8);
+  }
+
+  h4 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-500);
+    line-height: var(--spacing-20);
+    margin-bottom: var(--spacing-40);
+  }
+
+  .wrapperTours {
+    @extend .container;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--spacing-40);
+    margin-top: var(--spacing-40);
+  }
+}

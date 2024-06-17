@@ -33,3 +33,11 @@ export const buttonStyled4 = {
   height: '60px',
   borderRadius: 'var(--spacing-0)',
 };
+
+export const buttonStyled5 = {
+  background: 'var(--color-brown)',
+  fontSize: 'var(--font-size-22)',
+  fontWeight: 'var(--font-weight-600)',
+  color: 'var(--color-main-white)',
+  borderRadius: 'var(--border-radius-24)',
+};

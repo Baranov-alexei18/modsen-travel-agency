@@ -1,24 +1,20 @@
 export const LINK_HOME = '/';
 export const LINK_ROOM = '/rooms';
-export const LINK_ABOUT = '/about';
+export const LINK_TOURE = '/toure';
 export const LINK_CONTACT = '/contact';
-export const LINK_CATEGORY = '/category';
-export const LINK_AUTHOR = '/author';
-export const LINK_PRIVACY_POLICY = '/privacy-police';
 
 export const LINKS_HEADER = [
   LINK_HOME,
   LINK_ROOM,
-  LINK_ABOUT,
+  LINK_TOURE,
   LINK_CONTACT,
 ];
 
 export const LINKS_FOOTER = [
   LINK_HOME,
   LINK_ROOM,
-  LINK_ABOUT,
+  LINK_TOURE,
   LINK_CONTACT,
-  LINK_PRIVACY_POLICY,
 ];
 
 export const SOCIAL_NETWORK_LINKS = [

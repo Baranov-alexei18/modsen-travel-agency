@@ -5,6 +5,15 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compiler: {},
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'flagsapi.com',
+        port: '',
+      },
+    ],
+  },
 };
 
 if (process.env.NODE_ENV === 'production') {

@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 import { useDebounce } from '@/hooks/useDebounce';
 
 import styles from './styles.module.scss';
 
+export type ElasticSearchType = {
+  data: { name: string }[],
+  onHandleClick: (str: string) => void
+}
+
 export const ElasticSearch = (
-  { data, onHandleClick }: { data: string[], onHandleClick: (str: string) => void },
+  { data, onHandleClick }: ElasticSearchType,
 ) => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<string[]>([]);
+  const [results, setResults] = useState<{name:string}[]>([]);
   const [isSearching, setIsSearching] = useState(false);
   const [showResult, setShowResult] = useState(true);
 
@@ -16,7 +22,9 @@ export const ElasticSearch = (
 
   useEffect(() => {
     if (debouncedQuery.length > 0) {
-      const result = data.filter((tag) => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
+      const result = data.filter(
+        ({ name }) => name.toLowerCase().includes(debouncedQuery.toLowerCase()),
+      );
       if (!result.length) {
         setIsSearching(true);
       }
@@ -31,41 +39,38 @@ export const ElasticSearch = (
     setIsSearching(false);
     setShowResult(true);
     setQuery(value);
+    onHandleClick(value);
   };
 
-  const handleTag = (tag: string) => {
-    setQuery(tag);
-    setShowResult(false);
-  };
-
-  const handleSearch = () => {
-    setQuery('');
+  const handleItem = (query: string) => {
+    setQuery(query);
     onHandleClick(query);
+    setShowResult(false);
   };
 
   return (
     <div className={styles.wrapper}>
+      <Image src="/svg/search.svg" alt="search" width={18} height={18} />
       <input
         type="text"
-        placeholder="Search for tag..."
+        placeholder="Search"
         value={query}
         onChange={handleChange}
         className={styles.input}
       />
-      <button type="button" className={styles.button} onClick={handleSearch}>Search</button>
       {showResult && query && (
         <div className={styles.results}>
           {isSearching ? (
-            <p>No results</p>
+            <p>Not found</p>
           ) : (
             results.map((result) => (
               <div
-                key={result}
+                key={result.name}
                 className={styles.resultItem}
-                onClick={handleTag.bind(null, result)}
+                onClick={handleItem.bind(null, result.name)}
                 aria-hidden
               >
-                {result}
+                {result.name}
               </div>
             ))
           )}

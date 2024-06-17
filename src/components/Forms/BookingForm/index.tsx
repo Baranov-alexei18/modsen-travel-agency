@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { client, LIST_COUNTRIES } from '@/api/contries';
+import { client, LIST_COUNTRIES } from '@/api/countries';
 import { ButtonApp } from '@/components/ui-components/button';
 import { buttonStyled3 } from '@/components/ui-components/button/options';
 import { BaseModal } from '@/components/ui-components/modal';
