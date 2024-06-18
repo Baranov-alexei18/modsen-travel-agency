@@ -1,5 +1,11 @@
 @import '../../theme/styles.module.scss';
 
+$max-height-50: 50px;
+$max-width-250: 250px;
+$max-width-300: 300px;
+$max-width-360: 360px;
+$max-width-all: 100%;
+
 .footer {
     color: var(--color-main-white);
     background-color: var(--color-brown);
@@ -12,19 +18,6 @@
         gap: var(--spacing-28);
         justify-content: space-between;
         margin-bottom: var(--spacing-20);
-
-        .logo {
-            font-family: var(--font-family-dancing);
-            font-size: var(--font-size-24);
-            font-weight: var(--font-weight-700);
-            margin-bottom: var(--spacing-12);
-        }
-
-        .description {
-            max-width: 300px;
-            font-size: var(--font-size-12);
-            text-align: justify;
-        }
 
         .grid {
             flex: 1;
@@ -56,10 +49,23 @@
         .logoSection {
             flex: 0.7;
             margin-bottom: var(--spacing-20);
+
+            .logo {
+                font-family: var(--font-family-dancing);
+                font-size: var(--font-size-24);
+                font-weight: var(--font-weight-700);
+                margin-bottom: var(--spacing-12);
+            }
+
+            .description {
+                max-width: $max-width-300;
+                font-size: var(--font-size-12);
+                text-align: justify;
+            }
         }
 
         .sectionNewLetter {
-            max-width: 360px;
+            max-width: $max-width-360;
             flex: 1;
 
             h3 {
@@ -68,13 +74,13 @@
             }
 
             p {
-                max-width: 250px;
+                max-width: $max-width-250;
                 font-size: var(--font-size-12);
             }
         }
 
         .newsletterForm {
-            height: 50px;
+            height: $max-height-50;
             background-color: var(--color-main-white);
             display: flex;
             border-radius: var(--border-radius-4);
@@ -99,25 +105,48 @@
 
 
     @media (max-width: 768px) {
-        width: 100%;
-        padding: var(--spacing-20);
-
-        .row {
+        .wrapper {
             flex-direction: column;
+            padding: var(--spacing-8);
 
-            .logo {
+            .logoSection {
                 margin-bottom: var(--spacing-20);
+                text-align: center;
+
+                .description {
+                    text-align: center;
+                    max-width: $max-width-all;
+                }
             }
 
-            .actions {
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: var(--spacing-12);
-            }
-        }
+            .grid {
+                flex: 1;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--spacing-20);
 
-        .info {
-            text-align: center;
+                .column {
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+
+            .sectionNewLetter {
+                max-width: $max-width-all;
+                text-align: center;
+
+                h3 {
+                    font-size: var(--font-size-16);
+                    margin-bottom: var(--spacing-20);
+                }
+
+                p {
+                    max-width: $max-width-300;
+                    margin: auto;
+                    margin-bottom: var(--spacing-20);
+                }
+            }
+
         }
     }
 }
