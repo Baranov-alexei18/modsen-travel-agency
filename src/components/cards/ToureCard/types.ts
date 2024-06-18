@@ -3,5 +3,5 @@ export type ToureCardType = {
     currency: string;
     country: string;
     lang: string;
-    handleClickCard: () => void
+    handleClickCard: (str: string) => void
 };

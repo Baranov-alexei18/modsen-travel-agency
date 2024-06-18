@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { ToureCard } from '@/components/cards/ToureCard';
+import { BookingToureForm } from '@/components/Forms/BookingToureForm';
 import { ElasticSearch } from '@/components/ui-components/elastic-search-input';
+import { BaseModal } from '@/components/ui-components/modal';
 import { API_REQUEST_COUNTRIES, API_REQUEST_DATA_COUNTRY } from '@/constants/mock';
 import { useDebounce } from '@/hooks/useDebounce';
 
@@ -13,9 +15,11 @@ import styles from './styles.module.scss';
 export const SectionTourView = () => {
   const t = useTranslations('pages.aboutUs');
   // const { data, loading, error } = useQuery(LIST_COUNTRIES, { client });
+  const [chooseCountry, setChooseCountry] = useState<string>('');
   const [countries, setCountry] = useState(API_REQUEST_DATA_COUNTRY);
   const [filterQuery, setFilterQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const debouncedQuery = useDebounce(filterQuery);
 
   useEffect(() => {
@@ -33,6 +37,15 @@ export const SectionTourView = () => {
   const filterCountries = (query: string) => {
     setIsSearching(true);
     setFilterQuery(query);
+  };
+
+  const handleCard = (str: string) => {
+    setChooseCountry(str);
+    setOpenModal(true);
+  };
+
+  const closeModal = () => {
+    setOpenModal(false);
   };
 
   return (
@@ -55,9 +68,16 @@ export const SectionTourView = () => {
             currency={currency}
             country={country}
             lang={lang}
+            handleClickCard={handleCard}
           />
         ))}
       </div>
+      {openModal
+        && (
+        <BaseModal isOpen={openModal} onClose={closeModal}>
+          <BookingToureForm country={chooseCountry!} closeModal={closeModal} />
+        </BaseModal>
+        )}
     </section>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 import { useDebounce } from '@/hooks/useDebounce';
@@ -14,11 +14,12 @@ export const ElasticSearch = (
   { data, onHandleClick }: ElasticSearchType,
 ) => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<{name:string}[]>([]);
+  const [results, setResults] = useState<{ name: string }[]>([]);
   const [isSearching, setIsSearching] = useState(false);
   const [showResult, setShowResult] = useState(true);
 
   const debouncedQuery = useDebounce(query);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (debouncedQuery.length > 0) {
@@ -33,6 +34,19 @@ export const ElasticSearch = (
       setResults([]);
     }
   }, [debouncedQuery, data]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+        setShowResult(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [wrapperRef]);
 
   const handleChange = (event: { target: { value: string }; }) => {
     const { value } = event.target;
@@ -49,7 +63,7 @@ export const ElasticSearch = (
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} ref={wrapperRef}>
       <Image src="/svg/search.svg" alt="search" width={18} height={18} />
       <input
         type="text"

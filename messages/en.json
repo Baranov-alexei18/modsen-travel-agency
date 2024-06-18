@@ -21,8 +21,10 @@
         "checkOut": "Check out",
         "bookNow": "Book Now",
         "name":"Full Name",
+        "email":"Email",
         "phone": "Phone +375 ...",
-        "loading": "Loading..."
+        "loading": "Loading...",
+        "titleForm": "Connecting form for tours in {country}!"
       },
       "contact":{
         "email": "Your Email",

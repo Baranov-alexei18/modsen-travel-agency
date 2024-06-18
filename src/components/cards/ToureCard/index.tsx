@@ -10,18 +10,26 @@ import styles from './styles.module.scss';
 
 export const ToureCard = ({
   code, currency, country, lang, handleClickCard,
-}: Partial<ToureCardType>) => (
-  <div className={styles.card}>
-    <div className={styles.header}>{`Currency - ${currency}`}</div>
-    <div className={styles.imageContainer}>
-      <Image src={`https://flagsapi.com/${code}/flat/64.png`} alt={`flag-${code}`} fill />
+}: ToureCardType) => {
+  const handleClick = () => {
+    if (country) {
+      handleClickCard(country);
+    }
+  };
+
+  return (
+    <div className={styles.card}>
+      <div className={styles.header}>{`Currency - ${currency}`}</div>
+      <div className={styles.imageContainer}>
+        <Image src={`https://flagsapi.com/${code}/flat/64.png`} alt={`flag-${code}`} fill />
+      </div>
+      <div className={styles.description}>
+        {country}
+      </div>
+      <div className={styles.footer}>
+        <span>{lang}</span>
+        <ButtonApp style={buttonStyled5} onClick={handleClick}>More</ButtonApp>
+      </div>
     </div>
-    <div className={styles.description}>
-      {country}
-    </div>
-    <div className={styles.footer}>
-      <span>{lang}</span>
-      <ButtonApp style={buttonStyled5} onClick={handleClickCard}>More</ButtonApp>
-    </div>
-  </div>
-);
+  );
+};
