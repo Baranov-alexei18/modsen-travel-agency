@@ -57,10 +57,54 @@
     }
   }
 
-  .formWrapper{
+  .formWrapper {
     position: absolute;
     width: 100%;
     max-width: 100%;
     bottom: var(--spacing-48);
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+
+    .description {
+      z-index: var(--z-index-10);
+      text-align: center;
+      width: 100%;
+      margin: auto;
+
+      h1 {
+        font-size: var(--font-size-36);
+        color: var(--color-main-white);
+        line-height: var(--spacing-32);
+      }
+
+      h3 {
+        color: var(--color-main-white);
+      }
+
+      p {
+        max-width: 100%;
+        color: var(--color-main-white);
+      }
+    }
+
+    .moveTour {
+      justify-content: center;
+      color: var(--color-main-white);
+    }
+
+    .image {
+      position: absolute;
+      height: 380px;
+      max-width: 100%;
+      top: var(--spacing-0);
+      z-index: var(--z-index-1);
+    }
+
+    .formWrapper {
+      margin-top: var(--spacing-80);
+      position: static;
+    }
   }
 }

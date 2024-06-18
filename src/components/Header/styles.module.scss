@@ -44,14 +44,18 @@
   }
 
 
-  // @media (max-width: 992px) {
-  //   .actions {
-  //     display: none;
-  //   }
+  @media (max-width: 768px) {
+    .actions {
+      flex: 1;
+      font-size: var(--font-size-14);
 
-  //   .menuButton {
-  //     display: block;
-  //   }
+      a {
+        margin-right: var(--spacing-12);
+      }
 
-  // }
+      button {
+        margin-right: var(--spacing-0);
+      }
+    }
+  }
 }
