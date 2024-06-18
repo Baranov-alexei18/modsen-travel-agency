@@ -6,9 +6,8 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import * as Yup from 'yup';
 
-import { LINKS_FOOTER, SOCIAL_NETWORK_LINKS } from '@/constants/links';
+import { SOCIAL_NETWORK_LINKS } from '@/constants/links';
 
-import { SubscribeForm } from '../Forms/SubscribeForm';
 import { ButtonApp } from '../ui-components/button';
 import { buttonStyled1 } from '../ui-components/button/options';
 
