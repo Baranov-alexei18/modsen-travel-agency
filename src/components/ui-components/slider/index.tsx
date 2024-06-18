@@ -1,80 +1,14 @@
 import React, { useState } from 'react';
 
 import { TestimonialCard } from '@/components/cards/TestimonialCard';
-
-import { SliderDataType } from './types';
+import { TestimonialCardType } from '@/components/cards/TestimonialCard/types';
 
 import styles from './styles.module.scss';
 
-const testimonials = [
-  {
-    date: '2 Mar. 2023',
-    rating: 5,
-    text: '1. The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particularly impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.',
-    author: 'Anthony Bruff',
-    avatar: '/png/avatar/avatar1.png',
-  },
-  {
-    date: '25 Mar. 2023',
-    rating: 4,
-    text: '2. The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particularly impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.',
-    author: 'Regina Gella',
-    avatar: '/png/avatar/avatar1.png',
-  },
-  {
-    date: '5 Apr. 2023',
-    rating: 5,
-    text: '3. The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particularly impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.',
-    author: 'Jamiyu Allyu',
-    avatar: '/png/avatar/avatar1.png',
-  },
-  {
-    date: '12 Mar. 2023',
-    rating: 2,
-    text: '4. The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particularly impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.',
-    author: 'Anthony Akka',
-    avatar: '/png/avatar/avatar1.png',
-  },
-  {
-    date: '25 May 2024',
-    rating: 5,
-    text: '5. The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particularly impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.',
-    author: 'Regina Gella',
-    avatar: '/png/avatar/avatar1.png',
-  },
-  {
-    date: '7 sep. 2023',
-    rating: 4,
-    text: '6. The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particularly impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.',
-    author: 'Jamiyu Allyu',
-    avatar: '/png/avatar/avatar1.png',
-  },
-  {
-    date: '2 Mar. 2023',
-    rating: 5,
-    text: '7. The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particularly impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.',
-    author: 'Anthony Bruff',
-    avatar: '/png/avatar/avatar1.png',
-  },
-  {
-    date: '25 Mar. 2023',
-    rating: 4,
-    text: '8. The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particularly impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.',
-    author: 'Regina Gella',
-    avatar: '/png/avatar/avatar1.png',
-  },
-  {
-    date: '5 Apr. 2023',
-    rating: 5,
-    text: '9. The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particularly impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us). Numerous conference attendees commented on the quality of the food, the quality of the service and overall positive attitude toward the conference site. Particular noteworthy is the longevity of the staff and that sense of investment in the success of every event. I usually offer suggestions for improvements (part of being a marketing professor), but there is absolutely nothing that could be improved – you have set the bar very high.',
-    author: 'Jamiyu Allyu',
-    avatar: '/png/avatar/avatar1.png',
-  },
-];
-
 const ANIMATION_DURING = 100;
+const MOVE_SLIDER = 3;
 
-export const Slider = ({ data }: { data: SliderDataType[] }) => {
+export const Slider = ({ data }: { data: TestimonialCardType[] }) => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -82,7 +16,7 @@ export const Slider = ({ data }: { data: SliderDataType[] }) => {
     if (isAnimating) return;
     setIsAnimating(true);
     setTimeout(() => {
-      setCurrentReviewIndex((prev) => (prev === 0 ? testimonials.length - 3 : prev - 1));
+      setCurrentReviewIndex((prev) => (prev === 0 ? data.length - MOVE_SLIDER : prev - 1));
       setIsAnimating(false);
     }, ANIMATION_DURING);
   };
@@ -91,7 +25,7 @@ export const Slider = ({ data }: { data: SliderDataType[] }) => {
     if (isAnimating) return;
     setIsAnimating(true);
     setTimeout(() => {
-      setCurrentReviewIndex((prev) => (prev === testimonials.length - 3 ? 0 : prev + 1));
+      setCurrentReviewIndex((prev) => (prev === data.length - MOVE_SLIDER ? 0 : prev + 1));
       setIsAnimating(false);
     }, ANIMATION_DURING);
   };
@@ -106,7 +40,7 @@ export const Slider = ({ data }: { data: SliderDataType[] }) => {
         className={styles.slides}
         style={{ transform: `translateX(-${currentReviewIndex * 510}px)` }}
       >
-        {testimonials.map((testimonial) => (
+        {data.map((testimonial) => (
           <TestimonialCard key={`${testimonial.author}${testimonial.text}`} {...testimonial} />
         ))}
       </div>

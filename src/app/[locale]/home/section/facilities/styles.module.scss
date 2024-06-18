@@ -28,5 +28,13 @@
     .categoryContainer {
       gap: var(--spacing-20);
     }
+
+  }
+
+  @media (max-width: 768px) {
+    .allFacilities {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }

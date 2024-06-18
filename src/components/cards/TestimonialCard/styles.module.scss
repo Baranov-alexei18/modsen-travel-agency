@@ -58,26 +58,33 @@
     }
 
     .footer {
+        position: relative;
         display: flex;
+        height: 42px;
         align-items: center;
-        gap: 10px;
+        gap: var(--spacing-12);
+        margin-top: auto;
 
         .avatar {
-            width: 42px;
-            height: 42px;
             border-radius: var(--border-radius-circle);
             overflow: hidden;
 
             .avatarImage {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                max-width: 42px;
+                max-height: 42px;
+                object-fit: contain;
             }
         }
 
         .author {
             font-size: var(--font-size-16);
             font-weight: var(--font-weight-700);
+            margin-left: var(--spacing-48);
         }
+    }
+
+    @media (max-width: 768px) {
+        min-width: 360px;
+        width: 360px;
     }
 }

@@ -35,4 +35,20 @@
         gap: var(--spacing-36);
         transition: transform 0.5s ease-in-out;
     }
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+
+        .buttons {
+            justify-content: center;
+            order: 2;
+            margin-top: var(--spacing-32);
+            margin-right: var(--spacing-0);
+        }
+
+        .slides {
+            order: 1;
+        }
+    }
 }

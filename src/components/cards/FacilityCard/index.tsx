@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 export const FacilityCard = ({ src, title }: { src: string; title:string}) => (
   <div className={styles.card}>
     <div className={styles.imageContainer}>
-      <Image src={src} alt={title} layout="fill" objectFit="contain" />
+      <Image src={src} alt={title} layout="fill" />
     </div>
     <div className={styles.title}>{title}</div>
   </div>

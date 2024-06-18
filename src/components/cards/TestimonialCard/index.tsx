@@ -25,8 +25,7 @@ export const TestimonialCard = ({
         <Image
           src={avatar}
           alt={`${author}'s avatar`}
-          width={42}
-          height={42}
+          fill
           className={styles.avatarImage}
         />
       </div>
