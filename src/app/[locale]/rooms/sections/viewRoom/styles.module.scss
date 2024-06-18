@@ -11,4 +11,9 @@
   justify-content: space-around;
   color: var(--color-main-white);
   padding: var(--spacing-32) var(--spacing-0);
+
+  @media (max-width: 768px) {
+    padding: var(--spacing-8);
+  }
+
 }
