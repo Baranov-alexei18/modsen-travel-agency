@@ -58,4 +58,10 @@
       margin-bottom: var(--spacing-40);
     }
   }
+
+  @media (max-width: 768px) {
+    .content .subtitle {
+      width: 100%;
+    }
+  }
 }

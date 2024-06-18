@@ -49,4 +49,32 @@
     width: 80px;
     margin-left: auto;
   }
+
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+    padding: var(--spacing-8);
+
+    .header {
+      font-size: var(--font-size-12);
+    }
+
+    .description {
+      font-size: var(--font-size-16);
+    }
+
+    .footer {
+      font-size: var(--font-size-12);
+    }
+
+    button {
+      width: 40px;
+      font-size: var(--font-size-12) !important;
+    }
+
+    .imageContainer {
+      width: 64px;
+    }
+
+  }
 }

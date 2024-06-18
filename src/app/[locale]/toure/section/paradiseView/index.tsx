@@ -11,8 +11,6 @@ import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 import styles from './styles.module.scss';
 
 export const SectionParadise = () => {
-  const [authors, serAuthors] = useState([]);
-  const locale = useLocale();
   const t = useTranslations('pages.home.authors');
 
   return (

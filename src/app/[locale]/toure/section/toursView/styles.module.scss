@@ -28,4 +28,8 @@
     gap: var(--spacing-40);
     margin-top: var(--spacing-40);
   }
+
+  @media (max-width: 768px) {
+    margin: var(--spacing-8);
+  }
 }

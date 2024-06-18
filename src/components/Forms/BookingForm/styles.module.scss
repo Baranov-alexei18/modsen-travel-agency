@@ -48,5 +48,11 @@
     margin: var(--spacing-12) auto;
     padding: var(--spacing-20);
     background-color: var(--color-light-grey-second);
+
+    select,
+    input {
+      cursor: pointer;
+      min-width: 100%;
+    }
   }
 }

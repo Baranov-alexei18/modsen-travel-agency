@@ -60,5 +60,13 @@
     @media (max-width: 768px) {
         width: 100%;
         padding: var(--spacing-20);
+
+        .info {
+            flex-direction: column;
+        }
+
+        button{
+            max-width: 100%;
+        }
     }
 }

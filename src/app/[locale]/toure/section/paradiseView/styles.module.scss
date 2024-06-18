@@ -1,7 +1,6 @@
 @import '@/theme/styles.module.scss';
 
 .wrapper {
-  position: relative;
   display: flex;
   justify-content: space-between;
   @extend .container;
@@ -56,6 +55,57 @@
       height: inherit;
       width: inherit;
       object-fit: cover;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+    .description {
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      min-height: 450px;
+      z-index: var(--z-index-10);
+      text-align: center;
+      color: var(--color-main-white);
+
+      h1 {
+        padding: var(--spacing-12) var(--spacing-0);
+      }
+
+      h3 {
+        color: var(--color-main-white);
+        padding-top: var(--spacing-8);
+      }
+
+      p {
+        text-align: center;
+        font-size: var(--font-size-20);
+        font-weight: var(--font-weight-600);
+        margin: auto;
+      }
+    }
+
+    .moveTour {
+      button {
+        margin: auto;
+      }
+    }
+
+    .image {
+      position: absolute;
+      height: 450px;
+      max-width: 100%;
+      width: 100%;
+
+      img {
+        height: inherit;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 }
