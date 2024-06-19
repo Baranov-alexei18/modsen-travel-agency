@@ -1,13 +1,9 @@
 'use client';
 
 import React from 'react';
-import {
-  useQuery,
-} from '@apollo/client';
 import { useFormik } from 'formik';
 import { useTranslations } from 'next-intl';
 
-import { client, LIST_COUNTRIES } from '@/api/countries';
 import { ButtonApp } from '@/components/ui-components/button';
 import { buttonStyled3 } from '@/components/ui-components/button/options';
 import { InputApp } from '@/components/ui-components/input';

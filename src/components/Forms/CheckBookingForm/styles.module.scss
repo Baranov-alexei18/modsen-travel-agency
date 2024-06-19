@@ -1,3 +1,7 @@
+$spacing-100: 100%;
+$spacing-50: 50px;
+$spacing-450: 450px;
+
 .form {
   display: flex;
   flex-direction: column;
@@ -6,15 +10,15 @@
   input,
   select {
     flex: 1;
-    width: 100%;
-    max-width: 450px;
-    min-height: 50px;
+    width: $spacing-100;
+    max-width: $spacing-450;
+    min-height: $spacing-50;
     font-family: inherit;
     font-size: var(--font-size-16);
     padding: var(--spacing-4);
   }
 
   button {
-    height: 50px;
+    height: $spacing-50;
   }
 }

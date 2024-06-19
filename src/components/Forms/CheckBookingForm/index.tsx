@@ -12,6 +12,7 @@ import { ButtonApp } from '@/components/ui-components/button';
 import { buttonStyled3 } from '@/components/ui-components/button/options';
 import { InputApp } from '@/components/ui-components/input';
 import { SelectApp } from '@/components/ui-components/select';
+import { MAX_PERSON } from '@/constants';
 
 import { validationSchema } from './options';
 import { CheckBookingFormType } from './types';
@@ -100,13 +101,9 @@ export const CheckBookingForm = ({
         onBlur={handleBlur}
         value={values.countUser ? values.countUser : countUser.toString()}
       >
-        <option value={1}>01</option>
-        <option value={2}>02</option>
-        <option value={3}>03</option>
-        <option value={4}>04</option>
-        <option value={5}>05</option>
-        <option value={6}>06</option>
-        <option value={7}>07</option>
+        {Array.from({ length: MAX_PERSON }).map((_, index) => (
+          <option key={index} value={index + 1}>{`0${index + 1}`}</option>
+        ))}
       </SelectApp>
       <SelectApp
         data-testid="contact-form-typeRoom"

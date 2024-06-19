@@ -1,3 +1,5 @@
+export const MAX_PERSON = 7;
+
 export const FACILITIES = [
   {
     name: 'Swimming Pool',

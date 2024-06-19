@@ -1,7 +1,11 @@
+$spacing-100: 100%;
+$spacing-250: 250px;
+$spacing-300: 300px;
+
 .bookingForm {
   display: flex;
   gap: var(--spacing-16);
-  width: 100%;
+  width: $spacing-100;
   padding: var(--spacing-20) var(--spacing-0);
   background-color: var(--color-main-white);
 
@@ -23,7 +27,7 @@
     select,
     input {
       cursor: pointer;
-      max-width: 250px;
+      max-width: $spacing-250;
       border: none;
       font-size: var(--font-size-14);
       font-weight: var(--font-weight-500);
@@ -33,18 +37,18 @@
     }
 
     button {
-      width: 100%;
-      height: 100%;
-      padding: 10px;
+      width: $spacing-100;
+      height: $spacing-100;
+      padding: var(--spacing-8);
       border: none;
-      font-size: 16px;
+      font-size: var(--font-size-16);
       cursor: pointer;
     }
   }
 
   @media (max-width: 992px) {
     flex-direction: column;
-    max-width: 300px;
+    max-width: $spacing-300;
     margin: var(--spacing-12) auto;
     padding: var(--spacing-20);
     background-color: var(--color-light-grey-second);
@@ -52,7 +56,7 @@
     select,
     input {
       cursor: pointer;
-      min-width: 100%;
+      min-width: $spacing-100;
     }
   }
 }

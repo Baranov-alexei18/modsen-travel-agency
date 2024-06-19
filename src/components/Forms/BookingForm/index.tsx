@@ -9,6 +9,7 @@ import { client, LIST_COUNTRIES } from '@/api/countries';
 import { ButtonApp } from '@/components/ui-components/button';
 import { buttonStyled3 } from '@/components/ui-components/button/options';
 import { BaseModal } from '@/components/ui-components/modal';
+import { MAX_PERSON } from '@/constants';
 
 import { CheckBookingForm } from '../CheckBookingForm';
 
@@ -68,13 +69,9 @@ export const BookingForm = () => {
             {t('person')}
           </label>
           <select id="person" value={countUser} onChange={(event) => setCountUser(parseInt(event.target.value, 10))}>
-            <option value={1}>01</option>
-            <option value={2}>02</option>
-            <option value={3}>03</option>
-            <option value={4}>04</option>
-            <option value={5}>05</option>
-            <option value={6}>06</option>
-            <option value={7}>07</option>
+            {Array.from({ length: MAX_PERSON }).map((_, index) => (
+              <option key={index} value={index + 1}>{`0${index + 1}`}</option>
+            ))}
           </select>
         </div>
         <div className={styles.field}>
