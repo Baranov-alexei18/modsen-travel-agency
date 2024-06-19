@@ -1,11 +1,10 @@
 'use client';
 
-import { lazy, useRef } from 'react';
+import { useRef } from 'react';
 
+import { BannerRooms } from './sections/banner';
 import { PreviewSection } from './sections/previewSection';
 import { ViewRoom } from './sections/viewRoom';
-
-const BannerRoom = lazy(() => import('./sections/banner'));
 
 export default function Rooms() {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -18,7 +17,7 @@ export default function Rooms() {
 
   return (
     <main>
-      <BannerRoom handleScroll={handleScroll} />
+      <BannerRooms handleScroll={handleScroll} />
       <PreviewSection />
       <ViewRoom ref={contentRef} />
     </main>
