@@ -8,7 +8,7 @@ import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 import styles from './styles.module.scss';
 
 export const SectionBestToure = () => {
-  const t = useTranslations('pages.home.facilities');
+  const t = useTranslations('pages.toure');
 
   return (
     <section className={styles.wrapper}>
@@ -17,7 +17,7 @@ export const SectionBestToure = () => {
         <div className={styles.overlay} />
       </div>
       <div className={styles.content}>
-        <h1 className={styles.title}>Give yourself the best tour</h1>
+        <h1 className={styles.title}>{t('bestToure')}</h1>
       </div>
     </section>
   );

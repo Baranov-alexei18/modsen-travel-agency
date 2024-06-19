@@ -11,7 +11,6 @@ import styles from './styles.module.scss';
 
 export const SectionTestimonial = () => {
   const t = useTranslations('pages.home.testimonials');
-  const [reviews, setReviews] = useState([]);
 
   return (
     <section className={styles.SectionTestimonial}>

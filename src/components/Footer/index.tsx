@@ -3,7 +3,7 @@
 import emailjs from '@emailjs/browser';
 import { useFormik } from 'formik';
 import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import * as Yup from 'yup';
 
 import { SOCIAL_NETWORK_LINKS } from '@/constants/links';
@@ -14,8 +14,7 @@ import { buttonStyled1 } from '../ui-components/button/options';
 import styles from './styles.module.scss';
 
 const Footer = () => {
-  const locale = useLocale();
-  const t = useTranslations('header');
+  const t = useTranslations('footer');
 
   const {
     handleSubmit, handleChange, handleBlur, values,
@@ -52,20 +51,12 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
         <div className={styles.logoSection}>
-          <h2 className={styles.logo}>Paradise view</h2>
-          <p className={styles.description}>
-            The service at the Hotel Monteleone was
-            exceptional. There was absolutely no issue
-            that was not addressed timely and with
-            satisfactory results. We were particulary
-            impressed with how the hotel staff anticipated
-            our needs (periodically coming by the Board
-            Room to check with us)
-          </p>
+          <h2 className={styles.logo}>{t('title')}</h2>
+          <p className={styles.description}>{t('subtitle')}</p>
         </div>
         <div className={styles.grid}>
           <div className={styles.column}>
-            <h3>Quick links</h3>
+            <h3>{t('quicLinks')}</h3>
             <ul>
               <li>Room booking</li>
               <li>Rooms</li>
@@ -74,7 +65,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className={styles.column}>
-            <h3>Company</h3>
+            <h3>{t('company')}</h3>
             <ul>
               <li>Privacy policy</li>
               <li>Refund policy</li>
@@ -83,7 +74,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className={styles.column}>
-            <h3>Social media</h3>
+            <h3>{t('socialLinks')}</h3>
             <ul>
               {SOCIAL_NETWORK_LINKS.map(({ name, path }) => (
                 <li key={name}>
@@ -96,26 +87,25 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.sectionNewLetter}>
-          <h3>Newsletter</h3>
-          <p>
-            Kindly subscribe to our newsletter
-            to get latest deals on our rooms and vacation discount.
-          </p>
+          <h3>{t('newLetterTitle')}</h3>
+          <p>{t('newLetterSubtitle')}</p>
           <form className={styles.newsletterForm}>
             <input
               type="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder={`${t('email')}`}
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.email}
             />
-            <ButtonApp type="submit" style={buttonStyled1} onClick={handleSubmit}>Subscribe </ButtonApp>
+            <ButtonApp type="submit" style={buttonStyled1} onClick={handleSubmit}>
+              {t('subscribe')}
+            </ButtonApp>
           </form>
         </div>
       </div>
       <div className={styles.bottomLogo}>
-        Paradise view 2024
+        {`${t('title')} ${new Date().getFullYear()}`}
       </div>
     </footer>
   );

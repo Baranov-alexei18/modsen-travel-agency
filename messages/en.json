@@ -1,16 +1,24 @@
 {
     "Manifest": {
       "name": "main",
-      "title": "Client blog Modsen"
+      "title": "Travel agency Modsen"
     },
     "header": {
-      "title": "Hello world!",
-      "btnModalTitle": "Video about us",
       "/": "Home",
       "/rooms": "Room",
       "/toure": "Toure",
-      "/contact": "Contact",
-      "/privacy-police": "Privacy police"
+      "/contact": "Contact"
+    },
+    "footer": {
+      "title": "Paradise view",
+      "subtitle": "The service at the Hotel Monteleone was exceptional. There was absolutely no issue that was not addressed timely and with satisfactory results. We were particulary impressed with how the hotel staff anticipated our needs (periodically coming by the Board Room to check with us)",
+      "company": "Company",
+      "quicLinks": "Quick links"  ,
+      "socialLinks": "Social media",
+      "newLetterTitle": "Newsletter",
+      "newLetterSubtitle": "Kindly subscribe to our newsletter to get latest deals on our rooms and vacation discount.",
+      "subscribe": "Subscribe",
+      "email":"Enter your Email"
     },
     "forms": {
       "booking":{
@@ -57,31 +65,15 @@
           "Laundry": "Laundry",
           "Parking space": "Parking space"
         },
-        "posts":{
-          "featuredPost": "Featured Post",
-          "allPost": "All Post",
-          "view": "View all",
-          "btnTitle": "Read More >",
-          "myPosts": "My Posts"
+        "banner": {
+          "paradise": "Paradise View",
+          "title": "Hotel for every moment rich in emotion",
+          "subtitle": "Every moment feels like the first time in paradise view",
+          "takeTour": "Take a tour"
         },
-        "aboutUs":{
-          "sectionTitleAboutUs": "ABOUT US",
-          "sectionTitleMision": "OUR MISION",
-          "titleAboutUs": "We are a community of content writers who share their learnings",
-          "titleMision": "Creating valuable content for creatives all around the world",
-          "subtitleAboutUs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "subtitleMision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          "link": "Read More >"
-        },
-        "started":{
-          "sectionTitle": "WHY WE STARTED",
-          "title": "It started out as a simple idea and evolved into our passion",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-          "btnTitle": "Discover our story >"
-        },
-        "authors":{
-          "sectionTitle": "List of Authors",
-          "title": "Hey there, I’m {name} and welcome to my Blog"
+        "luxRooms": {
+          "title": "Luxurious Rooms",
+          "subtitle": "All rooms are designed for your comfort"
         },
         "testimonials":{
           "sectionTitle": "Testimonies",
@@ -89,28 +81,28 @@
           "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
         }
       },
-      "blog":{
-        "next": "Next >",
-        "prev": "< Prev"
-      },
-      "aboutUs":{
-        "aboutUs": "ABOUT US",
-        "title": "We are a team of content writers who share their learnings",
-        "sectionTitleMision": "OUR MISION",
-        "titleMision": "Creating valuable content for creatives all around the world",
-        "subtitleMision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
-        "sectionTitleVision": "OUR VISION",
-        "titleVision": "A platform that empowers individuals to improve",
-        "subtitleVision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
-        "blogsPublish": "Blogs Published",
-        "viewsOnFinsweet": "Views on Finsweet",
-        "activeUser": "Total active Users",
-        "teamCreatives": "Our team of creatives",
-        "whyStarted": "Why we started this Blog"
-      },
       "contact":{
         "title": "Rooms and Suites",
-        "subtitle": "The elegant luxury bedrooms in this gallery showcase custom interior designs & decorating ideas. View pictures and find your perfect luxury bedroom design."
+        "subtitle": "The elegant luxury bedrooms in this gallery showcase custom interior designs & decorating ideas. View pictures and find your perfect luxury bedroom design.",
+        "available": "Available",
+        "bookNow": "Book Now"
+      },
+      "rooms":{
+        "title": "Rooms and Suites",
+        "reservation": "Reservation"
+      },
+      "toure":{
+        "paradise": "Paradise View",
+        "title": "Cross-country tour",
+        "subtitle": "Every moment feels like the first time in paradise view",
+        "bookNow": "Book Now",
+        "bestToure": "Give yourself the best tour",
+        "titleSearch": "Tour search",
+        "subtitleSearch": "Choose a tour to any country",
+        "search": "Search",
+        "loading": "Loading...",
+        "noToure": "Sorry, tours not found...",
+        "notFound": "Not found" 
       }
     }
 }

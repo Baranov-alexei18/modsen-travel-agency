@@ -13,13 +13,16 @@ import { useDebounce } from '@/hooks/useDebounce';
 import styles from './styles.module.scss';
 
 export const SectionTourView = () => {
-  const t = useTranslations('pages.aboutUs');
+  const t = useTranslations('pages.toure');
+
   // const { data, loading, error } = useQuery(LIST_COUNTRIES, { client });
+
   const [chooseCountry, setChooseCountry] = useState<string>('');
   const [countries, setCountry] = useState(API_REQUEST_DATA_COUNTRY);
   const [filterQuery, setFilterQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+
   const debouncedQuery = useDebounce(filterQuery);
 
   useEffect(() => {
@@ -50,15 +53,15 @@ export const SectionTourView = () => {
 
   return (
     <section className={styles.wrapper}>
-      <h2>Tour search </h2>
-      <h4>Choose a tour to any country</h4>
+      <h2>{t('titleSearch')}</h2>
+      <h4>{t('subtitleSearch')}</h4>
       <ElasticSearch
         data={API_REQUEST_COUNTRIES.data?.countries}
         onHandleClick={filterCountries}
       />
       <div className={styles.wrapperTours}>
-        {isSearching && <div> Loading... </div>}
-        {!countries.length && !isSearching && <h1>Sorry, tours not found... </h1>}
+        {isSearching && <div>{t('loading')}</div>}
+        {!countries.length && !isSearching && <h1>{t('noToure')}</h1>}
         {!!countries.length && !isSearching && countries.map(({
           code, currency, country, lang,
         }) => (

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { useDebounce } from '@/hooks/useDebounce';
 
@@ -13,6 +14,8 @@ export type ElasticSearchType = {
 export const ElasticSearch = (
   { data, onHandleClick }: ElasticSearchType,
 ) => {
+  const t = useTranslations('pages.toure');
+
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<{ name: string }[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -67,7 +70,7 @@ export const ElasticSearch = (
       <Image src="/svg/search.svg" alt="search" width={18} height={18} />
       <input
         type="text"
-        placeholder="Search"
+        placeholder={`${t('search')}`}
         value={query}
         onChange={handleChange}
         className={styles.input}
@@ -75,7 +78,7 @@ export const ElasticSearch = (
       {showResult && query && (
         <div className={styles.results}>
           {isSearching ? (
-            <p>Not found</p>
+            <p>{t('notFound')}</p>
           ) : (
             results.map((result) => (
               <div

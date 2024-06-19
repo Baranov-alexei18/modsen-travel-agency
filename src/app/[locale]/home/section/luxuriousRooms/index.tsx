@@ -13,9 +13,7 @@ import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 import styles from './styles.module.scss';
 
 export const SectionLuxuriousRooms = () => {
-  const [categories, setCategories] = useState([]);
-  const locale = useLocale();
-  const t = useTranslations('pages.home.facilities');
+  const t = useTranslations('pages.home.luxRooms');
 
   return (
     <section className={styles.wrapper}>
@@ -24,8 +22,8 @@ export const SectionLuxuriousRooms = () => {
         <div className={styles.overlay} />
       </div>
       <div className={styles.content}>
-        <h1 className={styles.title}>Luxurious Rooms</h1>
-        <p className={styles.subtitle}>All rooms are designed for your comfort</p>
+        <h1 className={styles.title}>{t('title')}</h1>
+        <p className={styles.subtitle}>{t('subtitle')}</p>
         <div className={styles.rooms}>
           {LUX_ROOMS.map((
             { src, desc, count },

@@ -14,10 +14,9 @@ import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 import styles from './styles.module.scss';
 
 export const SectionParadise = () => {
-  const [authors, serAuthors] = useState([]);
   const locale = useLocale();
   const router = useRouter();
-  const t = useTranslations('pages.home.authors');
+  const t = useTranslations('pages.home.banner');
 
   const handleToToure = () => {
     router.push(`/${locale}/${LINK_TOURE}`);
@@ -26,21 +25,14 @@ export const SectionParadise = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.description}>
-        <h3>Paradise View</h3>
-        <h1>
-          Hotel for every
-          moment rich in
-          emotion
-        </h1>
-        <p>
-          Every moment feels like the first time
-          in paradise view
-        </p>
+        <h3>{t('paradise')}</h3>
+        <h1>{t('title')}</h1>
+        <p>{t('subtitle')}</p>
         <div className={styles.moveTour}>
           <ButtonApp style={buttonStyled2} onClick={handleToToure}>
             <Image src="/svg/triangle.svg" alt="Move" width={18} height={13} />
           </ButtonApp>
-          Take a tour
+          {t('takeTour')}
         </div>
       </div>
       <div className={styles.image}>

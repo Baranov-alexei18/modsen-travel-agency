@@ -11,23 +11,17 @@ import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 import styles from './styles.module.scss';
 
 export const SectionParadise = () => {
-  const t = useTranslations('pages.home.authors');
+  const t = useTranslations('pages.toure');
 
   return (
     <section className={styles.wrapper}>
       <div className={styles.description}>
-        <h3>Paradise View</h3>
-        <h1>
-          Cross-country
-          tour
-        </h1>
-        <p>
-          Every moment feels like the first time
-          in paradise view
-        </p>
+        <h3>{t('paradise')}</h3>
+        <h1>{t('title')}</h1>
+        <p>{t('subtitle')}</p>
         <div className={styles.moveTour}>
           <ButtonApp style={buttonStyled5}>
-            Book now
+            {t('bookNow')}
           </ButtonApp>
         </div>
       </div>
