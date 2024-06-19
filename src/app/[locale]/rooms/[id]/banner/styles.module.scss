@@ -1,9 +1,12 @@
 @import '@/theme/styles.module.scss';
 
+$spacing-100: 100%;
+$spacing-300: 300px;
+
 .wrapper {
   position: relative;
-  width: 100%;
-  min-height: 300px;
+  width: $spacing-100;
+  min-height: $spacing-300;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -17,13 +20,13 @@
     position: absolute;
     top: var(--spacing-0);
     left: var(--spacing-0);
-    width: 100%;
-    height: 100%;
+    width: $spacing-100;
+    height: $spacing-100;
     z-index: var(--z-index-1);
 
     img {
-      width: 100%;
-      height: 100%;
+      width: $spacing-100;
+      height: $spacing-100;
       object-fit: cover;
     }
 
@@ -31,8 +34,8 @@
       position: absolute;
       top: var(--spacing-0);
       left: var(--spacing-0);
-      width: 100%;
-      height: 100%;
+      width: $spacing-100;
+      height: $spacing-100;
       background: var(--color-brown);
       opacity: 0.6;
     }

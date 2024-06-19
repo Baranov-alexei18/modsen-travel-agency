@@ -1,12 +1,19 @@
 @import '@/theme/styles.module.scss';
 
+$spacing-100: 100%;
+$spacing-250: 250px;
+$spacing-400: 400px;
+$spacing-450: 450px;
+$spacing-620: 620px;
+$spacing-700: 700px;
+
 .wrapper {
   display: flex;
   justify-content: space-between;
   @extend .container;
 
   .description {
-    max-width: 400px;
+    max-width: $spacing-400;
     padding-top: var(--spacing-28);
 
     h1 {
@@ -25,7 +32,7 @@
     }
 
     p {
-      max-width: 250px;
+      max-width: $spacing-250;
       font-size: var(--font-size-16);
       padding-bottom: var(--spacing-20);
       margin-bottom: var(--spacing-12);
@@ -47,8 +54,8 @@
 
   .image {
     position: relative;
-    height: 620px;
-    width: 700px;
+    height: $spacing-620;
+    width: $spacing-700;
 
     img {
       position: relative;
@@ -59,15 +66,15 @@
   }
 
   @media (max-width: 768px) {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
+    width: $spacing-100;
+    max-width: $spacing-100;
+    height: $spacing-100;
 
     .description {
       position: relative;
-      max-width: 100%;
-      width: 100%;
-      min-height: 450px;
+      max-width: $spacing-100;
+      width: $spacing-100;
+      min-height: $spacing-450;
       z-index: var(--z-index-10);
       text-align: center;
       color: var(--color-main-white);
@@ -97,13 +104,13 @@
 
     .image {
       position: absolute;
-      height: 450px;
-      max-width: 100%;
-      width: 100%;
+      height: $spacing-450;
+      max-width: $spacing-100;
+      width: $spacing-100;
 
       img {
         height: inherit;
-        width: 100%;
+        width: $spacing-100;
         object-fit: cover;
       }
     }

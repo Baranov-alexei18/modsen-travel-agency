@@ -10,13 +10,6 @@ export const LINKS_HEADER = [
   LINK_CONTACT,
 ];
 
-export const LINKS_FOOTER = [
-  LINK_HOME,
-  LINK_ROOM,
-  LINK_TOURE,
-  LINK_CONTACT,
-];
-
 export const SOCIAL_NETWORK_LINKS = [
   {
     name: 'Facebook',

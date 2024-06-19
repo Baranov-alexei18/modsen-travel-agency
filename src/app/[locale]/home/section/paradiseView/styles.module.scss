@@ -1,5 +1,12 @@
 @import '@/theme/styles.module.scss';
 
+$spacing-100: 100%;
+$spacing-250: 250px;
+$spacing-380: 380px;
+$spacing-450: 450px;
+$spacing-620: 620px;
+$spacing-700: 700px;
+
 .wrapper {
   position: relative;
   display: flex;
@@ -7,7 +14,7 @@
   @extend .container;
 
   .description {
-    max-width: 450px;
+    max-width: $spacing-450;
 
     h1 {
       font-size: var(--font-size-56);
@@ -24,7 +31,7 @@
     }
 
     p {
-      max-width: 250px;
+      max-width: $spacing-250;
       font-size: var(--font-size-16);
       padding-bottom: var(--spacing-20);
 
@@ -46,8 +53,8 @@
 
   .image {
     position: relative;
-    height: 620px;
-    width: 700px;
+    height: $spacing-620;
+    width: $spacing-700;
 
     img {
       position: relative;
@@ -59,8 +66,8 @@
 
   .formWrapper {
     position: absolute;
-    width: 100%;
-    max-width: 100%;
+    width: $spacing-100;
+    max-width: $spacing-100;
     bottom: var(--spacing-48);
   }
 
@@ -70,7 +77,7 @@
     .description {
       z-index: var(--z-index-10);
       text-align: center;
-      width: 100%;
+      width: $spacing-100;
       margin: auto;
 
       h1 {
@@ -84,7 +91,7 @@
       }
 
       p {
-        max-width: 100%;
+        max-width: $spacing-100;
         color: var(--color-main-white);
       }
     }
@@ -96,15 +103,15 @@
 
     .image {
       position: absolute;
-      height: 380px;
-      max-width: 100%;
+      height: $spacing-380;
+      max-width: $spacing-100;
       top: var(--spacing-0);
       z-index: var(--z-index-1);
     }
 
     .formWrapper {
-      margin-top: var(--spacing-80);
       position: static;
+      margin-top: var(--spacing-80);
     }
   }
 }

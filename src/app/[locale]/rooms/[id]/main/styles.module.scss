@@ -1,5 +1,9 @@
 @import '@/theme/styles.module.scss';
 
+$spacing-100: 100%;
+$spacing-215: 215px;
+$spacing-500: 500px;
+
 .wrapper {
   @extend .container;
   display: flex;
@@ -42,19 +46,19 @@
     .description {
       margin: var(--spacing-20) var(--spacing-0);
       line-height: 1.6;
-      width: 500px;
+      width: $spacing-500;
     }
 
     .reservationButton {
       cursor: pointer;
       background: none;
+      max-width: $spacing-215;
       font-size: var(--font-size-20);
       font-weight: var(--font-weight-400);
       border: 1px solid var(--color-brown);
       transition: background-color 0.5s, color 0.5s;
       border-radius: var(--border-radius-12);
       padding: var(--spacing-20) var(--spacing-28);
-      max-width: 215px;
 
       &:hover {
         background-color: var(--color-brown);
@@ -81,7 +85,7 @@
       .description {
         text-align: justify;
         padding: var(--spacing-8);
-        width: 100%;
+        width: $spacing-100;
       }
 
       .reservationButton {
@@ -93,7 +97,7 @@
         transition: background-color 0.5s, color 0.5s;
         border-radius: var(--border-radius-12);
         padding: var(--spacing-20) var(--spacing-28);
-        max-width: 100%;
+        max-width: $spacing-100;
 
         &:hover {
           background-color: var(--color-brown);

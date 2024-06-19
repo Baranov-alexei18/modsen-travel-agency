@@ -11,14 +11,14 @@ export const BannerRooms = ({ handleScroll }: { handleScroll: () => void }) => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.backgroundImage}>
-        <Image src="/png/banner.png" alt="Luxurious Rooms Banner" layout="fill" />
+        <Image src="/png/banner.png" alt="Luxurious Rooms Banner" fill />
         <div className={styles.overlay} />
       </div>
       <div className={styles.content}>
         <h1 className={styles.title}>{t('title')}</h1>
         <h4 className={styles.subtitle}>{t('subtitle')}</h4>
         <button className={styles.btnDown} onClick={handleScroll}>
-          <Image src="/svg/arrow-down.svg" alt="Luxurious Rooms Banner" layout="fill" />
+          <Image src="/svg/arrow-down.svg" alt="Luxurious Rooms Banner" fill />
         </button>
       </div>
     </section>

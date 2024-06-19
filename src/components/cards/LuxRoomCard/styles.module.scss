@@ -1,6 +1,10 @@
+$spacing-100: 100%;
+$spacing-285: 285px;
+$spacing-385: 385px;
+
 .card {
-  width: 385px;
-  height: 385px;
+  width: $spacing-385;
+  height: $spacing-385;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,8 +15,8 @@
   text-align: center;
 
   .imageContainer {
-    width: 100%;
-    min-height: 285px;
+    width: $spacing-100;
+    min-height: $spacing-285;
     position: relative;
     margin-bottom: var(--spacing-12);
     border-radius: var(--border-radius-4);
@@ -38,7 +42,7 @@
     top: var(--spacing-20);
     background: var(--color-brown);
     color: var(--color-main-white);
-    padding: 0.5rem 1rem;
+    padding: var(--spacing-12);
     border-radius: var(--border-radius-4);
   }
 }

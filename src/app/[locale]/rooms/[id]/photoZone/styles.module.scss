@@ -1,5 +1,8 @@
 @import '@/theme/styles.module.scss';
 
+$spacing-380: 380px;
+$spacing-480: 480px;
+
 .wrapper {
   @extend .container;
   position: relative;
@@ -15,8 +18,8 @@
   .imageWrapper {
     flex: 1;
     border-radius: var(--border-radius-8);
-    max-height: 480px;
-    max-width: 380px;
+    max-height: $spacing-480;
+    max-width: $spacing-380;
     overflow: hidden;
     object-fit: contain;
 

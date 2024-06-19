@@ -10,11 +10,11 @@ export default function IndexPage({ params: { locale } }: {params: {locale: stri
   unstable_setRequestLocale(locale);
 
   return (
-    <div>
+    <main>
       <SectionParadise />
       <SectionFacilities />
       <SectionLuxuriousRooms />
       <SectionTestimonial />
-    </div>
+    </main>
   );
 }

@@ -37,18 +37,10 @@
       "contact":{
         "email": "Ваш емайл",
         "name": "ФИО",
-        "queryRelated": "Связанный запрос",
-        "support": "Поддержка",
-        "sales": "Продажи",
         "message": "Сообщение",
         "btnTitle": "Отправить сообщение",
         "successMessage": "Сообщение отправлено успешно",
         "errorMessage": "Что-то пошло не так. Попробуйте еще раз"
-      },
-      "join":{
-        "title": "Присоединяйтесь к нашей команде, чтобы стать частью нашей истории",
-        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-        "btnTitle": "Присоединяйся сейчас"
       }
     },
     "pages":{

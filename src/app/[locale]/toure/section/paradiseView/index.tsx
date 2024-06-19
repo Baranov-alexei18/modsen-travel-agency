@@ -1,11 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
-import { buttonStyled1, buttonStyled5 } from '@/components/ui-components/button/options';
+import { buttonStyled5 } from '@/components/ui-components/button/options';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';

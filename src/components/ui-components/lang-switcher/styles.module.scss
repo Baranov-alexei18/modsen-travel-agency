@@ -1,3 +1,8 @@
+$spacing-100: 100%;
+$neg-spacing-100: -100px;
+$spacing-40: 40px;
+$spacing-150: 150px;
+
 .languageSwitcher {
     position: relative;
     display: inline-block;
@@ -9,12 +14,12 @@
 
 .languageOptions {
     position: absolute;
-    top: 100%;
-    left: -100px;
+    top: $spacing-100;
+    left: $neg-spacing-100;
     background-color: var(--color-main-white);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--spacing-0) 2px var(--spacing-8) rgba(0, 0, 0, 0.2);
     z-index: var(--z-index-100);
-    width: 150px;
+    width: $spacing-150;
 }
 
 .languageOption {
@@ -36,6 +41,6 @@
 }
 
 .optionFlag {
-    width: 20px;
-    margin-right: 8px;
+    width: var(--spacing-20);
+    margin-right: var(--spacing-8);
 }

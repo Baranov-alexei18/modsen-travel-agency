@@ -20,7 +20,7 @@ $spacing-130: 130px;
     left: $spacing-0;
     width: $spacing-100;
     height: $spacing-100;
-    z-index: 1;
+    z-index: var(--z-index-1);
 
     img {
       width: $spacing-100;

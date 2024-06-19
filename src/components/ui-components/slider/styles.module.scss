@@ -1,6 +1,10 @@
+$spacing-100: 100%;
+$spacing-25: 25px;
+$spacing-30: 30px;
+
 .sliderContainer {
     text-align: center;
-    max-width: 100%;
+    max-width: $spacing-100;
     padding-bottom: var(--spacing-40);
     padding-top: var(--spacing-20);
     overflow: hidden;
@@ -15,8 +19,8 @@
         .next {
             cursor: pointer;
             background: none;
-            width: 30px;
-            height: 25px;
+            width: $spacing-30;
+            height: $spacing-25;
             border-radius: var(--border-radius-12);
             border: 1px solid var(--color-purple);
             color: var(--color-purple);

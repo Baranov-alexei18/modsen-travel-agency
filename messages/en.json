@@ -37,18 +37,10 @@
       "contact":{
         "email": "Your Email",
         "name": "Full Name",
-        "queryRelated": "Query Related",
-        "support": "Support",
-        "sales": "Sales",
         "message": "Message",
         "btnTitle": "Send Message",
         "successMessage": "Message sent successful",
         "errorMessage": "Message sent failed. Please try again"
-      },
-      "join":{
-        "title": "Join our team to be a part of our story",
-        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-        "btnTitle": "Join now"
       }
     },
     "pages":{

@@ -1,13 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
-import { FacilityCard } from '@/components/cards/FacilityCard';
 import { LuxRoomCard } from '@/components/cards/LuxRoomCard';
-import { FACILITIES, LUX_ROOMS } from '@/constants';
+import { LUX_ROOMS } from '@/constants';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
@@ -18,7 +15,7 @@ export const SectionLuxuriousRooms = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.backgroundImage}>
-        <Image src="/png/hotelRoomsBg.png" alt="Luxurious Rooms Background" layout="fill" objectFit="cover" />
+        <Image src="/png/hotelRoomsBg.png" alt="Luxurious Rooms Background" fill />
         <div className={styles.overlay} />
       </div>
       <div className={styles.content}>

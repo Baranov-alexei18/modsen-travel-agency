@@ -6,7 +6,7 @@ import { PhotoZoneSection } from './photoZone';
 
 export default function Page({ params }: { params: { id: string } }) {
   const filterData = ROOMS_HOTELS.filter(({ id }) => id === parseInt(params.id, 10))[0];
-  const { title, src, price } = filterData;
+  const { title, price } = filterData;
 
   return (
     <div>

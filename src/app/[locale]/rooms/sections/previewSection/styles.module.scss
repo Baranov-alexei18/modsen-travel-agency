@@ -1,10 +1,14 @@
+
+$spacing-50: 50%;
+$spacing-100: 100%;
+
 .wrapper {
   position: relative;
-  width: 100%;
+  width: $spacing-100;
   margin: auto;
 
   .video {
-    width: 100%;
+    width: $spacing-100;
     height: auto;
     display: block;
   }
@@ -12,8 +16,8 @@
   button {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: $spacing-50;
+    left: $spacing-50;
     transform: translate(-50%, -50%);
     background: var(--color-light-grey-second);
     border: none;

@@ -1,10 +1,13 @@
 @import '@/theme/styles.module.scss';
 
+$spacing-100: 100%;
+$spacing-700: 700px;
+
 .wrapper {
   @extend .container;
   position: relative;
-  width: 100%;
-  min-height: 700px;
+  width: $spacing-100;
+  min-height: $spacing-700;
   display: flex;
   gap: var(--spacing-20);
   flex-wrap: wrap;

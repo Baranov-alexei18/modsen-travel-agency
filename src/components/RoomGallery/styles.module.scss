@@ -1,3 +1,7 @@
+$spacing-100: 100%;
+$spacing-80: 80px;
+$spacing-450: 450px;
+
 .galleryContainer {
     display: flex;
     flex: 1;
@@ -11,8 +15,8 @@
 
     .thumbnail {
         overflow: hidden;
-        width: 80px;
-        height: 80px;
+        width: $spacing-80;
+        height: $spacing-80;
         cursor: pointer;
         border: 1px solid var(--color-main-white);
         transition: border-color 0.3s;
@@ -28,15 +32,15 @@
         display: flex;
         align-items: center;
         overflow: hidden;
-        width: 100%;
-        max-height: 100%;
+        width: $spacing-100;
+        max-height: $spacing-100;
         background-color: var(--color-light-yellow);
         border-radius: var(--border-radius-12);
 
         img {
-            width: 100%;
+            width: $spacing-100;
             height: auto;
-            max-height: 450px;
+            max-height: $spacing-450;
         }
     }
 }
